@@ -713,5 +713,6 @@ th {
 @media (max-width: 425px) {
     body {
         background: linear-gradient(to right, #000000, #202734);
+        height: 105vh;
     }
 }
