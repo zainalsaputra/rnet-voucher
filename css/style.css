@@ -231,7 +231,7 @@ footer a:hover {
 .shine {
     margin: 0 auto 10px;
     font-weight: 700;
-    background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.3, #fff)) 0 0 no-repeat;
+    background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.1, #fff)) 0 0 no-repeat;
     -webkit-background-size: 150px;
     color: #008cff56;
     -webkit-background-clip: text;
@@ -707,5 +707,11 @@ th {
 
     100% {
         width: 100%
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        background: linear-gradient(to right, #000000, #202734);
     }
 }
