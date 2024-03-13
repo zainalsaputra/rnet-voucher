@@ -78,6 +78,7 @@ main .login-form> :not(span) {
     margin: 3px 0
 }
 
+/* 
 .form input {
     width: 100%;
     height: 100%;
@@ -127,7 +128,7 @@ main .login-form> :not(span) {
   .form input:focus + .label-name::after,
   .form input:valid + .label-name::after {
     transform: translateX(0%);
-  }
+  } */
 
 main .login-form input {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -136,12 +137,15 @@ main .login-form input {
 
 main .login-form input[type="text"],
 main .login-form input[type="password"] {
-    background: #11151B;
+    background: #11151b00;
     border: 1px solid #3D414A;
     border-radius: 5px;
+    /* border: none; */
+    /* border-bottom: 1px solid #fff; */
     padding: 10px;
     color: #fff;
-    font-size: 16px
+    font-size: 16px;
+    transition: box-shadow 1.2s;
 }
 
 main .login-form input[type="text"]:hover,
@@ -228,7 +232,7 @@ footer a:hover {
     font-weight: 700;
     background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.3, #fff)) 0 0 no-repeat;
     -webkit-background-size: 150px;
-    color: #008dff92;
+    color: #008cff56;
     -webkit-background-clip: text;
     -webkit-animation-name: shine;
     -webkit-animation-duration: 5s;
@@ -244,17 +248,18 @@ footer a:hover {
     height: 2.5px;
     border: none;
     background-size: 200% 100%;
-    background-image: linear-gradient(to right,#ffffff, #7990da,rgba(82, 95, 122, 0.8) 50%, #9724ee);
+    background-image: linear-gradient(to right, #ffffff, #7990da, rgba(82, 95, 122, 0.8) 50%, #9724ee);
     animation-duration: 2s;
     animation-name: slide;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-  
-  &--delay {
-    animation-delay: 1s;
-  }
-    
-    &::before, &::after {
+
+    &--delay {
+        animation-delay: 1s;
+    }
+
+    &::before,
+    &::after {
         content: '';
         display: block;
         position: absolute;
@@ -263,20 +268,25 @@ footer a:hover {
         top: -1px;
         background: white;
     }
-    
+
     &::before {
         left: 0;
         top: -1px;
     }
-    
+
     &::after {
         right: 0;
     }
 }
 
 @keyframes slide {
-    from { background-position: left 0; }
-    to { background-position: right 0; }
+    from {
+        background-position: left 0;
+    }
+
+    to {
+        background-position: right 0;
+    }
 }
 
 
@@ -299,14 +309,14 @@ footer a:hover {
     background: linear-gradient(45deg, #ffffff, #7990da, #9724ee, #000fb5, #6600ff, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
-    opacity: 0;
+    /* opacity: 0; */
     transition: opacity .3s ease-in-out;
     border-radius: 5px;
 }
@@ -315,7 +325,7 @@ footer a:hover {
     color: #000
 }
 
-.glow-on-hover:active:after {
+.glow-on-hover:hover:after {
     background: transparent;
 }
 
@@ -336,9 +346,17 @@ footer a:hover {
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
 
 .appbar-description {
@@ -689,4 +707,3 @@ th {
         width: 100%
     }
 }
-
