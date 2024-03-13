@@ -145,7 +145,8 @@ main .login-form input[type="password"] {
     padding: 10px;
     color: #fff;
     font-size: 16px;
-    transition: box-shadow 1.2s;
+    transition: box-shadow 0.5s;
+    font-weight: 550;
 }
 
 main .login-form input[type="text"]:hover,
@@ -327,6 +328,7 @@ footer a:hover {
 
 .glow-on-hover:hover:after {
     background: transparent;
+    transition: 1s;
 }
 
 .glow-on-hover:hover:before {
