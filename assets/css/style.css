@@ -454,9 +454,34 @@ iframe {
     border: 1px solid #d9534f
 }
 
-.copy {
+.box {
+    margin-top: 10px;
+}
+
+.customer-service {
+    margin-top: 5px;
+    /* color: #fff; */
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-service a {
     color: #fff;
-    font-size: .9em
+    font-weight: 600;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.customer-service a:hover {
+    letter-spacing: 2px;
+}
+
+.customer-service i {
+    font-size: large;
+    /* margin-top: px; */
 }
 
 .paket-voucher {
